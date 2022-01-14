@@ -1,4 +1,7 @@
 import { Block, Columns, Container, Heading, Image, Navbar } from "react-bulma-components";
+import { Link, Route, Routes } from "react-router-dom";
+import CargoContainer from "./pages/CargoContainer";
+import Client from "./pages/Client";
 
 function App() {
   return (
@@ -25,37 +28,44 @@ function App() {
           <Columns.Column >
             <Navbar style={{ borderRadius: "10px" }}>
               <Navbar.Menu>
-                <Navbar.Container >
-                  <Navbar.Item hoverable arrowless>
-                    <Navbar.Link>Containers</Navbar.Link>
-                    <Navbar.Dropdown right>
-                      <Navbar.Item href="#">Lista</Navbar.Item>
-                      <Navbar.Divider />
-                      <Navbar.Item href="#">Novo</Navbar.Item>
-                      <Navbar.Item href="#">Editar</Navbar.Item>
-                      <Navbar.Item href="#">Remover</Navbar.Item>
-                    </Navbar.Dropdown>
-                  </Navbar.Item>
-                  <Navbar.Item hoverable arrowless>
-                    <Navbar.Link>Clientes</Navbar.Link>
-                    <Navbar.Dropdown right>
-                      <Navbar.Item href="#">Lista</Navbar.Item>
-                      <Navbar.Divider />
-                      <Navbar.Item href="#">Cadastrar</Navbar.Item>
-                      <Navbar.Item href="#">Editar</Navbar.Item>
-                      <Navbar.Item href="#">Remover</Navbar.Item>
-                    </Navbar.Dropdown>
-                  </Navbar.Item>
-                </Navbar.Container>
-                <Navbar.Container align="right">
-                  <Navbar.Item href="#">
-                    Relatórios
-                  </Navbar.Item>
-                </Navbar.Container>
+                  <Navbar.Container >
+                    <Navbar.Item hoverable arrowless>
+                      <Navbar.Link><Link to="/">Containers</Link></Navbar.Link>
+                      <Navbar.Dropdown right>
+                        <Navbar.Item>Lista</Navbar.Item>
+                        <Navbar.Divider />
+                        <Navbar.Item>Novo</Navbar.Item>
+                        <Navbar.Item>Editar</Navbar.Item>
+                        <Navbar.Item>Remover</Navbar.Item>
+                      </Navbar.Dropdown>
+                    </Navbar.Item>
+                    <Navbar.Item hoverable arrowless>
+                      <Navbar.Link><Link to="client">Clientes</Link></Navbar.Link>
+                      <Navbar.Dropdown right>
+                        <Navbar.Item>Lista</Navbar.Item>
+                        <Navbar.Divider />
+                        <Navbar.Item><Link to="client/new">Cadastrar</Link></Navbar.Item>
+                        <Navbar.Item>Editar</Navbar.Item>
+                        <Navbar.Item>Remover</Navbar.Item>
+                      </Navbar.Dropdown>
+                    </Navbar.Item>
+                  </Navbar.Container>
+                  <Navbar.Container align="right">
+                    <Navbar.Item>
+                      Relatórios
+                    </Navbar.Item>
+                  </Navbar.Container>
               </Navbar.Menu>
             </Navbar>
           </Columns.Column>
         </Columns>
+      </Container>
+      <Container>
+        <Routes>
+          <Route path="/" element={<CargoContainer/>} />
+          <Route path="client" element={<Client/>} />          
+          <Route path="client/new" element={<Client.Subscribe/>} />
+        </Routes>
       </Container>
     </>
   );

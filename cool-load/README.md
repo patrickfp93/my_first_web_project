@@ -1,4 +1,4 @@
- # Cool Load
+# Cool Load
 Hi it this cool load Project
 ## ToDo implementation
 
@@ -15,3 +15,9 @@ Hi it this cool load Project
     -the menu must have Crud for container and clients.
     -it's necessary make relatory end button on navbar.
     -Right below must has space for contents.
+
+### `3º` apply base for functionalities
+    -Apply routers
+        --Client
+        --Containers
+### `4º` ------
