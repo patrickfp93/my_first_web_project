@@ -1,4 +1,4 @@
-import { Block, Button, Columns, Container, Heading, Image, Navbar, Notification } from "react-bulma-components";
+import { Block, Columns, Container, Heading, Image, Navbar } from "react-bulma-components";
 
 function App() {
   return (
