@@ -1,4 +1,4 @@
-<title>Cool Load</title>
+#Cool Load
 <img src="./public/logo.svg" alt="My cool logo"/>
 
 Hi it this cool load Project
