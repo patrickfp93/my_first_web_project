@@ -1,0 +1,11 @@
+c:\projectsCode\web_projects\cool_load_backend\target\debug\deps\pear-3fc09d1cf8999e87.rmeta: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\macros.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\input.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\result.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\debug.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\combinators.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\parsers.rs
+
+c:\projectsCode\web_projects\cool_load_backend\target\debug\deps\pear-3fc09d1cf8999e87.d: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\macros.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\input.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\result.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\debug.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\combinators.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\parsers.rs
+
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\lib.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\macros.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\input.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\result.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\debug.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\combinators.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\pear-0.1.4\src\parsers.rs:
