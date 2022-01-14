@@ -1,4 +1,4 @@
-![plot](./public/logo.svg) # Cool Load
+![# Cool Load](./public/logo.svg?raw=true "Title") 
 Hi it this cool load Project
 
 ## ToDo implementation
