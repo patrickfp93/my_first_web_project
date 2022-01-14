@@ -1,5 +1,5 @@
-# Cool Load
-![logo](./public/logo.svg)
+
+![logo](./public/logo.svg) # Cool Load
 Hi it this cool load Project
 ## ToDo implementation
 
