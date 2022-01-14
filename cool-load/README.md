@@ -1,5 +1,4 @@
-![](./public/logo.svg?raw=true "Title") 
-Hi it this cool load Project
+
 <img src="./public/logo.svg" alt="My cool logo"/>
 # My cool project and above is the logo of it
 
