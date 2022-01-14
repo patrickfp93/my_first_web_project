@@ -2,6 +2,7 @@ import { Block, Columns, Container, Heading, Image, Navbar } from "react-bulma-c
 import { Link, Route, Routes } from "react-router-dom";
 import CargoContainer from "./pages/CargoContainer";
 import Client from "./pages/Client";
+import Home from "./pages/home";
 
 function App() {
   return (
@@ -62,7 +63,8 @@ function App() {
       </Container>
       <Container>
         <Routes>
-          <Route path="/" element={<CargoContainer/>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/container" element={<CargoContainer/>} />
           <Route path="client" element={<Client/>} />          
           <Route path="client/new" element={<Client.Subscribe/>} />
         </Routes>
