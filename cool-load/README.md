@@ -1,4 +1,4 @@
-# Cool Load
+![img](C:\projectscode\web_projects\cool-load\public\logo.svg) # Cool Load
 
 Hi it this cool load Project
 
