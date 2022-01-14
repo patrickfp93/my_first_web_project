@@ -1,5 +1,4 @@
-![plot](./public/logo.svg)
-# Cool Load
+![plot](./public/logo.svg) # Cool Load
 Hi it this cool load Project
 
 ## ToDo implementation
