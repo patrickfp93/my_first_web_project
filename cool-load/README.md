@@ -1,6 +1,5 @@
-
+<title>Cool Load</title>
 <img src="./public/logo.svg" alt="My cool logo"/>
-# My cool project and above is the logo of it
 
 Hi it this cool load Project
 ## ToDo implementation
