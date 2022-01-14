@@ -1,5 +1,5 @@
 # Cool Load
-![img](C:\projectscode\web_projects\cool-load\public\logo512.png)
+![plot](./public/logo512.png)
 Hi it this cool load Project
 
 ## ToDo implementation
