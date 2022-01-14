@@ -32,7 +32,7 @@ function App() {
                   <Navbar.Container >
                     <Navbar.Item><Link to="/">Home</Link></Navbar.Item>
                     <Navbar.Item hoverable arrowless>
-                      <Navbar.Link><Link to="/container">Containers</Link></Navbar.Link>
+                      <Navbar.Link><Link to="/containers">Containers</Link></Navbar.Link>
                       <Navbar.Dropdown right>
                         <Navbar.Item>Novo</Navbar.Item>
                         <Navbar.Item>Editar</Navbar.Item>
@@ -61,7 +61,7 @@ function App() {
       <Container>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/container" element={<CargoContainer/>} />
+          <Route path="/containers" element={<CargoContainer/>} />
           <Route path="/moviment" element={<Moviment/>} />          
           <Route path="/moviment/new" element={<Moviment.Subscribe/>} />
         </Routes>

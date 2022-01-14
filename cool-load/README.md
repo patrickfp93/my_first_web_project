@@ -18,6 +18,9 @@ Hi it this cool load Project
 
 ### `3º` apply base for functionalities
     -Apply routers
-        --Client
+        --Moviments
         --Containers
+    -create Models
+        --Containers
+        --Moviments
 ### `4º` ------
