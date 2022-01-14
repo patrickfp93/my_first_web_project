@@ -2,7 +2,7 @@
 
 Hi it this cool load Project
 
-## List implementation
+## ToDo implementation
 
 ### `1º` install dependencies
     - install node-sass
