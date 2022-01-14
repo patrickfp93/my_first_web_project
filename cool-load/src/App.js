@@ -1,8 +1,8 @@
 import { Block, Columns, Container, Heading, Image, Navbar } from "react-bulma-components";
 import { Link, Route, Routes } from "react-router-dom";
 import CargoContainer from "./pages/CargoContainer";
-import Client from "./pages/Client";
 import Home from "./pages/home";
+import Moviment from "./pages/Moviment";
 
 function App() {
   return (
@@ -30,22 +30,19 @@ function App() {
             <Navbar style={{ borderRadius: "10px" }}>
               <Navbar.Menu>
                   <Navbar.Container >
+                    <Navbar.Item><Link to="/">Home</Link></Navbar.Item>
                     <Navbar.Item hoverable arrowless>
-                      <Navbar.Link><Link to="/">Containers</Link></Navbar.Link>
+                      <Navbar.Link><Link to="/container">Containers</Link></Navbar.Link>
                       <Navbar.Dropdown right>
-                        <Navbar.Item>Lista</Navbar.Item>
-                        <Navbar.Divider />
                         <Navbar.Item>Novo</Navbar.Item>
                         <Navbar.Item>Editar</Navbar.Item>
                         <Navbar.Item>Remover</Navbar.Item>
                       </Navbar.Dropdown>
                     </Navbar.Item>
                     <Navbar.Item hoverable arrowless>
-                      <Navbar.Link><Link to="client">Clientes</Link></Navbar.Link>
+                      <Navbar.Link><Link to="moviment">Movimentações</Link></Navbar.Link>
                       <Navbar.Dropdown right>
-                        <Navbar.Item>Lista</Navbar.Item>
-                        <Navbar.Divider />
-                        <Navbar.Item><Link to="client/new">Cadastrar</Link></Navbar.Item>
+                        <Navbar.Item><Link to="moviment/new">Cadastrar</Link></Navbar.Item>
                         <Navbar.Item>Editar</Navbar.Item>
                         <Navbar.Item>Remover</Navbar.Item>
                       </Navbar.Dropdown>
@@ -65,8 +62,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/container" element={<CargoContainer/>} />
-          <Route path="client" element={<Client/>} />          
-          <Route path="client/new" element={<Client.Subscribe/>} />
+          <Route path="/moviment" element={<Moviment/>} />          
+          <Route path="/moviment/new" element={<Moviment.Subscribe/>} />
         </Routes>
       </Container>
     </>
