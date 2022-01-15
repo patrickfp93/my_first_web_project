@@ -1,0 +1,3 @@
+WARN rustc_metadata::locator no metadata found: incompatible metadata version found: '\\?\C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\serde_derive-732b6f6991b48a7e.dll'
+WARN rustc_metadata::locator no metadata found: incompatible metadata version found: '\\?\C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\pear_codegen-5bd093c42e1c07e7.dll'
+WARN rustc_metadata::locator no metadata found: incompatible metadata version found: '\\?\C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\pear_codegen-07aaf59ea19dc560.dll'

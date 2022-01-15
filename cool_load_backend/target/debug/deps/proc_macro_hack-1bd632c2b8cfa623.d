@@ -1,0 +1,9 @@
+c:\projectsCode\web_projects\cool_load_backend\target\debug\deps\proc_macro_hack-1bd632c2b8cfa623.dll: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\quote.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\error.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\iter.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\parse.rs
+
+c:\projectsCode\web_projects\cool_load_backend\target\debug\deps\proc_macro_hack-1bd632c2b8cfa623.d: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\quote.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\error.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\iter.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\parse.rs
+
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\lib.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\quote.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\error.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\iter.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\proc-macro-hack-0.5.19\src\parse.rs:

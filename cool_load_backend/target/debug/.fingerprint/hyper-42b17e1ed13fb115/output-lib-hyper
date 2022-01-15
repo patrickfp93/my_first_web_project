@@ -1,0 +1,3 @@
+WARN rustc_metadata::locator no metadata found: incompatible metadata version found: '\\?\C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\tokio_macros-c72249346773c077.dll'
+WARN rustc_metadata::locator no metadata found: incompatible metadata version found: '\\?\C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\futures_macro-f15675bd55c84f37.dll'
+WARN rustc_metadata::locator no metadata found: incompatible metadata version found: '\\?\C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\serde_derive-732b6f6991b48a7e.dll'
