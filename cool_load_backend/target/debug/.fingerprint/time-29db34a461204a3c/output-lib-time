@@ -1,0 +1,2 @@
+WARN rustc_metadata::locator no metadata found: incompatible metadata version found: '\\?\C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\proc_macro_hack-1bd632c2b8cfa623.dll'
+WARN rustc_metadata::locator no metadata found: incompatible metadata version found: '\\?\C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\time_macros_impl-474f99334a1d656e.dll'

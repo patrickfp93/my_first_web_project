@@ -4,6 +4,7 @@ use rocket::{Request, Response, http::Header, fairing::{Fairing, Info, Kind}};
 
 mod router;
 mod model;
+mod persist;
 
 #[catch(404)]
 fn not_found(_req: &Request<'_>) -> String {
@@ -12,6 +13,7 @@ fn not_found(_req: &Request<'_>) -> String {
 
 #[launch]
 fn rocket() -> _ {
+    persist::init_bank().unwrap();
     rocket::build().
     mount("/",router::post::get_routers()).
     mount("/", router::get::get_routers()).
@@ -30,6 +32,6 @@ impl Fairing for CORS {
     }
     async fn on_response<'r>(&self, _req: &'r Request<'_>, response: &mut Response<'r>){
         response.set_header(Header::new("Access-Control-Allow-Origin", "*"));
-        response.set_header(Header::new("Access-Control-Allow-Methods", "GET, DELETE, HEAD, OPTIONS"));
+        response.set_header(Header::new("Access-Control-Allow-Methods", "GET, DELETE, POST, OPTIONS"));
     }
 }

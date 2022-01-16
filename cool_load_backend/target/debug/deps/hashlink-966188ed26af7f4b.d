@@ -1,0 +1,10 @@
+C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\hashlink-966188ed26af7f4b.rmeta: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\linked_hash_map.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\linked_hash_set.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\lru_cache.rs
+
+C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\libhashlink-966188ed26af7f4b.rlib: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\linked_hash_map.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\linked_hash_set.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\lru_cache.rs
+
+C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\hashlink-966188ed26af7f4b.d: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\linked_hash_map.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\linked_hash_set.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\lru_cache.rs
+
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\lib.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\linked_hash_map.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\linked_hash_set.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\hashlink-0.7.0\src\lru_cache.rs:

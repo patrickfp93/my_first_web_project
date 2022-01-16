@@ -1,8 +1,8 @@
 use serde::{Deserialize, Serialize};
-
+use rocket::data::FromData;
 use super::client::Client;
 
-#[derive(Serialize,Deserialize)]
+#[derive(Serialize,Deserialize,Debug)]
 pub struct Container{
     pub id: String,
     pub client: Client,
@@ -11,20 +11,50 @@ pub struct Container{
     pub category : ContainerCategory 
 }
 
-#[derive(Serialize,Deserialize)]
+#[derive(Serialize,Deserialize,Debug)]
 pub enum TypeContainer{
     T20,
     T40
 }
 
-#[derive(Serialize,Deserialize)]
+
+impl TypeContainer{
+    pub fn from(txt : String) -> Self{
+        if txt == "T20"{
+            Self::T20
+        }else{
+            Self::T40
+        } 
+    }
+}
+
+#[derive(Serialize,Deserialize,Debug)]
 pub enum ContainerStatus{
     Empty,
     Full
 }
 
-#[derive(Serialize,Deserialize)]
+impl ContainerStatus{
+    pub fn from(txt : String) -> Self{
+        if txt == "Empty"{
+            Self::Empty
+        }else{
+            Self::Full
+        } 
+    }
+}
+
+#[derive(Serialize,Deserialize,Debug)]
 pub enum ContainerCategory{
     Importation,
     Exportation
+}
+impl ContainerCategory{
+    pub fn from(txt : String) -> Self{
+        if txt == "Importation"{
+            Self::Importation
+        }else{
+            Self::Exportation
+        } 
+    }
 }

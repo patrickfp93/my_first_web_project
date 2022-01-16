@@ -1,0 +1,11 @@
+C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\time-85b2dc0cae45da5f.rmeta: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\display.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\duration.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\parse.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\sys.rs
+
+C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\libtime-85b2dc0cae45da5f.rlib: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\display.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\duration.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\parse.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\sys.rs
+
+C:\projectsCode\web_projects\cool_load_backend\target\debug\deps\time-85b2dc0cae45da5f.d: C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\lib.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\display.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\duration.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\parse.rs C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\sys.rs
+
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\lib.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\display.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\duration.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\parse.rs:
+C:\Users\PatrickFernandes\.cargo\registry\src\github.com-1ecc6299db9ec823\time-0.1.44\src\sys.rs:
