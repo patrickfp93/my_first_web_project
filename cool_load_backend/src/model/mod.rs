@@ -1,7 +1,7 @@
 pub mod client;
 pub mod container;
 pub mod moviment;
-mod Container;
+pub mod pack_container;
 
 use rocket::data::FromData;
 use serde::{Serialize, Deserialize};

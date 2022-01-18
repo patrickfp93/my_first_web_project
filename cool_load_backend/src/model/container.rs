@@ -1,5 +1,4 @@
 use serde::{Deserialize, Serialize};
-use rocket::data::FromData;
 use super::client::Client;
 
 #[derive(Serialize,Deserialize,Debug)]
@@ -16,8 +15,6 @@ pub enum TypeContainer{
     T20,
     T40
 }
-
-
 impl TypeContainer{
     pub fn from(txt : String) -> Self{
         if txt == "T20"{
