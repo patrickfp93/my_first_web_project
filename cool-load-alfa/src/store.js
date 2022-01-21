@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import errorReducer from './reducers/ErrorSlice';
-import messageReducer from './reducers/MessageSlice';
+import containerReducer from './reducers/ContainerSlice';
+import movimentReducer from './reducers/MovimentSlice';
 export default configureStore({
   reducer: {
       erros: errorReducer,
-      message:messageReducer
+      container: containerReducer,
+      moviment: movimentReducer
   },
 })

@@ -24,9 +24,12 @@ $body-background-color: $beige-lighter;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+$calendar-date-color: $primary;
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma-calendar/src/sass/index.sass";
+@import "../node_modules/bulma-calendar/src/sass/timepicker.sass";
 
 $fa-font-path:"../webfonts";
 

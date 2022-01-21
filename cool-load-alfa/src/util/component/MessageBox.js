@@ -1,34 +1,34 @@
-import { Button, Modal } from "react-bulma-components";
-import { useDispatch, useSelector } from "react-redux";
-import FaIcon from "./FaIcon";
-import {close} from "./../../reducers/MessageSlice";
+import { Button, Heading, Modal, Notification } from "react-bulma-components";
 
 
-const MessageBox = ({ title,onYes, onNo }) => {
-    const dispatch = useDispatch();
-    let currentTitle= (title)?title:"Confirma?";
-    const message = useSelector((state) => state.message.value);
+const MessageBox = ({ title, children, show, onClose, options, alignButtons,alignTitle, color ,...args }) => {
+    let currentTitle = (title) ? title : "Confirma?";
+    let buttons = [{ value: "Sim", color: "success" }, { value: "Não", color: "warning" }];
+    if (options instanceof Array) {
+        buttons = options;
+    }
     return (<>
-        <Modal show={message !== "" && message} onClose={() => {
-            dispatch(close());
+        <Modal show={show} onClose={() => {
+            if(onClose instanceof Function)onClose(undefined);
         }}>
-            <Modal.Content >
+            <Modal.Content>
                 <Modal.Card >
-                    <Modal.Card.Header>
-                        <Modal.Card.Title>{title}</Modal.Card.Title>
+                    <Modal.Card.Header {...args} color={(color)?color:"primary"} renderAs={Notification} style={{ borderRadius: "10px 10px 0px 0px", margin: "0px" }}>
+                        <Modal.Card.Title renderAs={Heading} align={(alignTitle)?alignTitle:"center"} >{currentTitle}</Modal.Card.Title>
                     </Modal.Card.Header>
                     <Modal.Card.Body>
-                        {message}
+                        {children}
                     </Modal.Card.Body>
-                    <Modal.Card.Footer renderAs={Button.Group} align="right" hasAddons>
-                        <Button color="success" align="left" onClick={() => {
-                            dispatch(close());
-                            if (typeof onYes === 'function') onYes();
-                        }} ><FaIcon className="check" /><p>YES</p></Button>
-                        <Button color="warning" align="right" onClick={() => {                            
-                            dispatch(close());
-                            if (typeof onNo === 'function') onNo();
-                        }}><FaIcon className="times" /><p>NO</p></Button>
+                    <Modal.Card.Footer {...args} color={(color)?color:"primary"} renderAs={Notification} style={{ borderRadius: "0px 0px 10px 10px", margin: "0px" }}>
+                        <Button.Group style={{width:"100%"}} align={(alignButtons) ? alignButtons : "right"}>
+                            {buttons.map((v, i) => {
+                                let value = (v.value) ? v.value : v;
+                                return (<Button key={i} disabled={v.disabled} color={(v.color) ? v.color : "white"} onClick={() => {
+                                    if (onClose instanceof Function) onClose(value);
+                                }}> <p>{value}</p>
+                                </Button>);
+                            })}
+                        </Button.Group>
                     </Modal.Card.Footer>
                 </Modal.Card>
             </Modal.Content>
