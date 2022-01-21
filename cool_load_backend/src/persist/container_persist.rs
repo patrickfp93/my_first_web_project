@@ -25,29 +25,28 @@ pub fn add(
     category: ContainerCategory,
     conn: &Connection,
 ) -> Result<()> {
-    loop {
-        let id = generate_code();
-        let client_id = client.id;
+    let id = generate_code();
+    let client_id = client.id;
+    let type_container = format!("{:?}", type_container);
+    let status = format!("{:?}", status);
+    let category = format!("{:?}", category);
+    for _ in 0..1000 {
         let result = conn.execute(
             "INSERT INTO container (id,client_id,type,status,category)
-         VALUES (?1,?2,?3,?4,?5,?6)",
-            params![
-                id,
-                client_id, 
-                format!("{:?}", type_container),
-                format!("{:?}", status),
-                format!("{:?}", category)
-            ],
+            VALUES (?1,?2,?3,?4,?5)",
+            params![id, client_id, type_container, status, category],
         );
-        if let Ok(_) = result {
+        if let Ok(_) = result{
             break;
-        }
+        } 
     }
     Ok(())
 }
 
-pub fn remove(id: usize, conn: &Connection) -> Result<()> {
-    conn.execute("DELETE FROM container WHERE id=?1", params![id])?;
+pub fn remove(ids: Vec<String>, conn: &Connection) -> Result<()> {
+    for id in ids{
+        conn.execute("DELETE FROM container WHERE id=?1", params![id])?;
+    }
     Ok(())
 }
 
@@ -59,7 +58,7 @@ pub fn edit(container: Container, conn: &Connection) -> Result<()> {
     let category = format!("{:?}", container.category);
     conn.execute(
         "UPDATE container
-    SET type = ?2,client_id = ?3,type =?4,status =?5,category=?6
+    SET client_id = ?2,type =?3,status =?4,category=?5
     WHERE id=?1;",
         params![id, client_id, type_container, status, category],
     )?;
@@ -67,13 +66,17 @@ pub fn edit(container: Container, conn: &Connection) -> Result<()> {
 }
 
 pub fn all(conn: &Connection) -> Result<Vec<Container>> {
-    let mut stmt = conn.prepare("SELECT container.id,client.id,client.name,container.type,container.status,container.category,
+    let mut stmt = conn.prepare("SELECT container.id,client.id,client.name,
+    container.type,container.status,container.category,
     container.client_id
     FROM container INNER JOIN client ON container.client_id=client.id")?;
     let client_iter = stmt.query_map([], |row| {
         Ok(Container {
             id: row.get(0)?,
-            client: Client{ id: row.get(1)?, name: row.get(2)? },
+            client: Client {
+                id: row.get(1)?,
+                name: row.get(2)?,
+            },
             type_container: TypeContainer::from(row.get(3)?),
             status: ContainerStatus::from(row.get(4)?),
             category: ContainerCategory::from(row.get(5)?),
@@ -93,4 +96,3 @@ pub fn all(conn: &Connection) -> Result<Vec<Container>> {
 fn test_generete_code() {
     println!("{:?}", generate_code());
 }
-

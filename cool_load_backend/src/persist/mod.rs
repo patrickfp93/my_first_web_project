@@ -16,16 +16,16 @@ pub fn init_bank() -> Result<()>{
     )?;
     conn.execute(
         "create table if not exists container (
-             id text primary key UNIQUE,
-             client_id integer not null references client(id),
-             type TEXT CHECK(type IN ('T20', 'T40')) NOT NULL ,
-             status TEXT CHECK(status IN ('Empty','Full')) NOT NULL,
-             category TEXT CHECK(status IN ('Importation','Exportation'))
-         )",
+            id text primary key UNIQUE,
+            client_id integer not null references client(id),
+            type TEXT CHECK(type IN ('T20', 'T40')) NOT NULL ,
+            status TEXT CHECK(status IN ('Empty','Full')) NOT NULL,
+            category TEXT CHECK( category IN ('Importation','Exportation')) NOT NULL
+           )",
         [],
     )?;
     conn.execute(
-        "create table if not exists moviments (
+        "create table if not exists moviment (
              id integer primary key,
              type TEXT CHECK(type IN ('Boarding','Unloading','GateIn','Repositioning', 'Weighing','Scanner', 'GateOut')) NOT NULL ,
              container_id integer not null references container(id),

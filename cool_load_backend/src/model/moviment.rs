@@ -16,7 +16,7 @@ pub struct Moviment{
 }
 #[derive(Serialize,Deserialize,Debug)]
 pub enum TypeMovimentation{
-    Boarding,Unloading,GateIn,Repositioning, Weighing,Scanner
+    Boarding,Unloading,GateIn,GateOut,Repositioning, Weighing,Scanner
 }
 impl TypeMovimentation{
     pub fn from(txt : String) -> Self{
@@ -26,6 +26,8 @@ impl TypeMovimentation{
             return Self::Unloading;
         } if txt == "GateIn"{
             return Self::GateIn;
+        } if txt == "GateOut"{
+            return Self::GateOut;
         } if txt == "Repositioning"{
             return Self::Repositioning;
         } if txt == "Weighing"{

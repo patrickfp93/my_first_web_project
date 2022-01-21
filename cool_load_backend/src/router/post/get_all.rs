@@ -1,6 +1,6 @@
 use rocket::Route;
 
-use crate::{model::{container::Container, client::Client}, persist::{container_persist, client_persist}};
+use crate::{model::{container::Container, client::Client, moviment::Moviment}, persist::{container_persist, client_persist, moviment_persist}};
 use rocket::serde::json::Json;
 use rusqlite::Connection;
 
@@ -19,6 +19,13 @@ fn clients() -> Json<Vec<Client>>{
     Json::from(result)
 }
 
+#[post("/get/all/moviment")]
+fn moviments() -> Json<Vec<Moviment>> {
+    let conn = Connection::open("data.db").unwrap();
+    let result = moviment_persist::all(&conn).unwrap();
+    Json::from(result)
+}
+
 pub(crate) fn get_routers() -> Vec<Route> {
-    routes![containers,clients]
+    routes![containers,clients,moviments]
 }

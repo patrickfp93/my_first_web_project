@@ -11,6 +11,6 @@ pub fn all_routers() -> Vec<Route>{
     }
     for route in post::get_routers() {
         reply.push(route);
-    }
+    } 
     reply
 }

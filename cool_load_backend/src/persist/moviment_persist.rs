@@ -1,7 +1,11 @@
 use chrono::{DateTime, TimeZone, Utc};
 use rusqlite::{params, Connection, Result};
 
-use crate::model::{container::{Container, TypeContainer, ContainerStatus, ContainerCategory}, moviment::{TypeMovimentation, Moviment}, client::Client};
+use crate::model::{
+    client::Client,
+    container::{Container, ContainerCategory, ContainerStatus, TypeContainer},
+    moviment::{Moviment, TypeMovimentation},
+};
 
 pub fn add(
     type_movimentation: TypeMovimentation,
@@ -26,8 +30,10 @@ pub fn add(
     Ok(())
 }
 
-pub fn remove(id: usize, conn: &Connection) -> Result<()> {
-    conn.execute("DELETE FROM moviment WHERE id=?1", params![id])?;
+pub fn remove(ids: Vec<usize>, conn: &Connection) -> Result<()> {
+    for id in ids {
+        conn.execute("DELETE FROM moviment WHERE id=?1", params![id])?;
+    }
     Ok(())
 }
 
@@ -38,20 +44,17 @@ pub fn edit(moviment: Moviment, conn: &Connection) -> Result<()> {
     let start_time = get_string(&moviment.start_time.unwrap());
     let end_time = get_string(&moviment.end_time.unwrap());
     conn.execute(
-        "UPDATE moviment SET type = ?2,container_id = ?3,start_date_time=?3,end_date_time=?4 WHERE id=?1;",
-        params![id, container_id, type_container, start_time, end_time],
+        "UPDATE moviment SET type = ?2,container_id = ?3,start_date_time=?4,end_date_time=?5 WHERE id=?1;",
+        params![id, type_container,container_id , start_time, end_time],
     )?;
     Ok(())
 }
 
 pub fn all(conn: &Connection) -> Result<Vec<Moviment>> {
     let mut stmt = conn.prepare(
-        "SELECT moviment.id, moviment.type, moviment.start_date_time, moviment.end_date_time,
-         client.id,client.name,
-         container.id,container.type,container.status,container.category
-     FROM moviment 
-     INNER JOIN container ON moviment.client_id=container_id
-     INNER JOIN Cliente ON container.client_id=client.id"
+        "SELECT m.id, m.type, m.start_date_time, m.end_date_time,l.id,l.name,
+        c.id,c.type,c.status,c.category from  moviment as m inner join container as c on m.container_id = c.id
+        inner join client as l on c.client_id = l.id",
     )?;
     let client_iter = stmt.query_map([], |row| {
         let container = Container {
@@ -63,8 +66,8 @@ pub fn all(conn: &Connection) -> Result<Vec<Moviment>> {
             type_container: TypeContainer::from(row.get(7)?),
             status: ContainerStatus::from(row.get(8)?),
             category: ContainerCategory::from(row.get(9)?),
-        }; 
-        Ok(Moviment{
+        };
+        Ok(Moviment {
             id: row.get(0)?,
             type_movimentation: TypeMovimentation::from(row.get(1)?),
             start_time: Some(get_datetime(row.get(2)?)),
@@ -98,7 +101,7 @@ fn get_datetime(date_txt: String) -> DateTime<Utc> {
 #[cfg(test)]
 #[test]
 fn test_conversions() {
-    use chrono::{TimeZone};
+    use chrono::TimeZone;
     let dt = Utc.ymd(2018, 1, 26).and_hms_micro(18, 30, 9, 453_829);
     let date_string = get_string(&dt);
     println!("{}", date_string);

@@ -2,6 +2,8 @@ use rocket::Route;
 
 mod add;
 
+mod edit;
+
 mod remove;
 
 mod get_all;
@@ -9,6 +11,9 @@ mod get_all;
 pub(crate) fn get_routers() -> Vec<Route> {
     let mut result = vec![];
     for r in add::get_routers(){
+        result.push(r);
+    }    
+    for r in edit::get_routers(){
         result.push(r);
     }
     for r in remove::get_routers(){

@@ -14,6 +14,7 @@ fn not_found(_req: &Request<'_>) -> String {
 #[launch]
 fn rocket() -> _ {
     persist::init_bank().unwrap();
+    
     rocket::build().
     mount("/",router::post::get_routers()).
     mount("/", router::get::get_routers()).
